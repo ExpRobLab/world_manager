@@ -36,7 +36,7 @@
           </surface>
           <max_contacts>10</max_contacts>
         </collision>
-        <visual name='aruco_box_mesh'>
+        <visual name='aruco_box_mesh2'>
           <geometry>
             <mesh>
                 <uri>model://aruco_box2/model.dae</uri>
