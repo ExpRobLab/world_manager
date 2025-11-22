@@ -16,10 +16,16 @@ def generate_launch_description():
 	pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
 	 
 	# Add your own gazebo library path here
-	 
-	gazebo_models_path = "/home/ubuntu/gazebo_models"
-	os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
-	
+	gazebo_models_path =get_package_share_directory("worlds_manager")
+	gazebo_models_path, ignore_last_dir = os.path.split(gazebo_models_path)
+	gazebo_models_path = os.path.join(gazebo_models_path, 'worlds_manager','models')
+	# print(gazebo_models_path)
+	if "GZ_SIM_RESOURCE_PATH" in os.environ:
+		os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
+	else:
+		os.environ["GZ_SIM_RESOURCE_PATH"] = gazebo_models_path
+	# print("GZ_SIM_RESOURCE_PATH:", os.environ["GZ_SIM_RESOURCE_PATH"])
+
 	gazebo_launch = IncludeLaunchDescription(
 		PythonLaunchDescriptionSource(
 			os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'),
