@@ -175,73 +175,30 @@
     </model>
 
 
-    <model name='aruco_box'>
-      <pose>-8.13393 8.96476 0.25 0 0 -0.70923</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
-        </collision>
-        <visual name='aruco_box_mesh'>
-          <geometry>
-            <mesh>
-              <uri>model://aruco_box/model.dae</uri>
-              <scale>0.25 0.25 0.25</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
+    <include>
+  <uri>model://aruco_box2</uri>
+  <name>aruco_box0</name>
+  <pose>-8.13393 8.96476 0.25 0 0 -0.70923</pose>
+</include>
 
-    <model name='aruco_box_1'>
-      <pose>8.2066 9.01096 0.25 0 0 -0.70923</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
-        </collision>
-        <visual name='aruco_box_mesh'>
-          <geometry>
-            <mesh>
-              <uri>model://aruco_box/model.dae</uri>
-              <scale>0.25 0.25 0.25</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
+<include>
+  <uri>model://aruco_box2</uri>
+  <name>aruco_box1</name>
+  <pose>8.2066 9.01096 0.25 0 0 -0.70923</pose>
+</include>
 
-    <model name='aruco_box_2'>
-      <pose>8.59999 -8.8995 0.25 0 0 -0.70923</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
-        </collision>
-        <visual name='aruco_box_mesh'>
-          <geometry>
-            <mesh>
-              <uri>model://aruco_box/model.dae</uri>
-              <scale>0.25 0.25 0.25</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
+<include>
+  <uri>model://aruco_box2</uri>
+  <name>aruco_box2</name>
+  <pose>8.59999 -8.8995 0.25 0 0 -0.70923</pose>
+</include>
 
-    <model name='aruco_box_3'>
-      <pose>-8.04121 -8.85077 0.25 0 0 -0.70923</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
-        </collision>
-        <visual name='aruco_box_mesh'>
-          <geometry>
-            <mesh>
-              <uri>model://aruco_box/model.dae</uri>
-              <scale>0.25 0.25 0.25</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
+<include>
+  <uri>model://aruco_box2</uri>
+  <name>aruco_box3</name>
+  <pose>-8.04121 -8.85077 0.25 0 0 -0.70923</pose>
+</include>
+
 
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
